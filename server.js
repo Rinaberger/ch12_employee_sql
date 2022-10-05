@@ -1,5 +1,7 @@
-const mysql = require("mysql2");
 const express = require('express');
+const inquirer = require('inquirer');
+const db = require('./db');
+require('console.table');
 //const inputCheck = require('./utils/inputCheck');
 
 const PORT = process.env.PORT || 3001;
@@ -10,26 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Start server after DB connection
-db.connect(err => {
-    if (err) throw err;
-   console.log('Database connected.');
-   app.listen(PORT, () => {
+app.listen(PORT, () => {
      console.log(`Server running on port ${PORT}`);
    });
- });
