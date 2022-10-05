@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Rinaberger/ch12_employee_sql#readme",
   "dependencies": {
     "console.table": "^0.10.0",
+    "exrpess": "^0.0.1-security",
     "inquirer": "^8.2.4",
     "mysql2": "^2.3.3"
   },
