@@ -1,0 +1,28 @@
+{
+  "name": "ch12_employee_sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rinaberger/ch12_employee_sql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rinaberger/ch12_employee_sql/issues"
+  },
+  "homepage": "https://github.com/Rinaberger/ch12_employee_sql#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
