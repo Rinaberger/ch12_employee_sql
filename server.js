@@ -1,17 +1,17 @@
-const express = require('express');
 const inquirer = require('inquirer');
 const db = require('./db');
 require('console.table');
 //const inputCheck = require('./utils/inputCheck');
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+// const PORT = process.env.PORT || 3001;
 
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
-const textTitle = ` EMPLOYEE TRACKER `;
+const textTitle = ` 
+
+EMPLOYEE TRACKER
+EMPLOYEE TRACKER
+EMPLOYEE TRACKER
+EMPLOYEE TRACKER`;
 
 // display the textArt and main prompts
 const start = () => {
@@ -26,7 +26,7 @@ const homepageMenu = () => {
 			{
 				type: 'list',
 				name: 'homepageMenu',
-				message: 'What would you like to do?',
+				message: 'Choose function.',
 				choices: [
 					'View all departments',
 					'View all roles',
@@ -35,7 +35,7 @@ const homepageMenu = () => {
 					'Add a role',
 					'Add an employee',
 					'Update an employee role',																			
-					'Exit',
+					//'Exit',
 				],
 			},
 		])
@@ -61,19 +61,7 @@ const homepageMenu = () => {
 					break;
 				case 'Update an employee role':
 					updateEmployeeRole();
-					break;				
-				case 'Delete a department':
-					deleteDepartment();
-					break;
-				case 'Delete a role':
-					deleteRole();
-					break;
-				case 'Delete an employee':
-					deleteEmployee();
-					break;
-				case 'Exit':
-					exit();
-					break;
+					break;												
 			}
 		});
 };
@@ -285,14 +273,9 @@ const updateEmployeeRole = () => {
 	});
 };
 
-// exit the application
-const exit = () => {
-	console.log('Thank you and goodbye!');
-	process.exit();
-};
 
 start();
 
-app.listen(PORT, () => {
-     console.log(`Server running on port ${PORT}`);
-   });
+// app.listen(PORT, () => {
+//      console.log(`Server running on port ${PORT}`);
+//    });
