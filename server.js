@@ -7,7 +7,6 @@ require('console.table');
 
 
 const textTitle = ` 
-
 EMPLOYEE TRACKER
 EMPLOYEE TRACKER
 EMPLOYEE TRACKER
