@@ -10,7 +10,7 @@ class DB {
 		return this.connection
 			.promise()
 			.query(
-				"SELECT employee.id id, employee.first_name, employee.last_name, roles.title, department.name, roles.salary, CONCAT(manager.first_name, ' ', manager.last_name) manager FROM employee LEFT JOIN roles on employee.role_id = roles.id LEFT JOIN department on roles.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
+				"SELECT employee.id, employee.first_name, employee.last_name, roles.title, department.dept_name, roles.salary, CONCAT(manager.first_name, ' ', manager.last_name) manager FROM employee LEFT JOIN roles on employee.role_id = roles.id LEFT JOIN department on roles.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
 			);
 	}
 
@@ -43,7 +43,7 @@ class DB {
 		return this.connection
 			.promise()
 			.query(
-				'SELECT role_id id, title, department.name department, salary FROM roles LEFT JOIN department on roles.department_id = department.id'
+				'SELECT roles.id, roles.title, department.dept_name department, salary FROM roles LEFT JOIN department on roles.department_id = department.id'
 			);
 	}
 
@@ -70,7 +70,7 @@ class DB {
 		console.log(department);
 		return this.connection
 			.promise()
-			.query('INSERT INTO departments SET name = ?', department);
+			.query('INSERT INTO department SET name = ?', department);
 	}
 
 	// Remove a department from the db
