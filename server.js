@@ -99,6 +99,11 @@ const addDepartment = () => {
 	inquirer
 		.prompt([
 			{
+				name: 'id',
+				type: 'integer',
+				message: 'New department ID?',
+			},
+			{
 				name: 'dept_name',
 				type: 'input',
 				message: 'New department name?',
@@ -122,6 +127,11 @@ const addRole = () => {
 		}));
 		inquirer
 			.prompt([
+				{
+					name: 'id',
+					type: 'integer',
+					message: 'New role ID?',
+				},
 				{
 					name: 'title',
 					type: 'input',

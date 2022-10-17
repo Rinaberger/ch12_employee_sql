@@ -18,7 +18,7 @@ class DB {
 	createEmployee(employee) {
 		return this.connection
 			.promise()
-			.query('INSERT INTO employee SET ?', employee);
+			.query('INSERT INTO employees SET ?', employee);
 	}
 
 	// Remove an employee with the given id
@@ -68,9 +68,7 @@ class DB {
 	// Create a new department
 	createDepartment(department) {
 		console.log(department);
-		return this.connection
-			.promise()
-			.query('INSERT INTO department SET name = ?', department);
+		return this.connection.promise().query('INSERT INTO department SET ?', department);
 	}
 
 	// Remove a department from the db
